@@ -1,7 +1,7 @@
 # Paint-Program
 A remake of MS Paint, with additional cool features (see below).
 
-#Downloading
+# Downloading
 
 This repo includes pygame 2.0.0 because of certain functions behaving slightly differently if pygame 1.x.x is used
 user_agent (module used to download images) is also included
@@ -14,11 +14,12 @@ static (folder)
 saved images (folder)
 
 
-#Usage
+# Usage
 To use the program, simply click on main.py. Note that you must have Python 3 installed already.
 
 
-#List of individual features
+# List of individual features
+
     tool select highlight: a red border around the selected tool. press tab to cycle through the tools. also applies to music player buttons
     
     highlighting tool
@@ -46,7 +47,8 @@ To use the program, simply click on main.py. Note that you must have Python 3 in
             page down/page up to toggle next track/previous track
 
 
-#Notes
+# Notes
+
     theoretically all necessary packages/modules (pygame and user_agent) should already come with the program folder, provided that Python 3 is installed on the computer already
     
     the theme of this paint project is...Wood!
