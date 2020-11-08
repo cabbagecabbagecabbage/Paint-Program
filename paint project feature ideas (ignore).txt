@@ -1,0 +1,40 @@
+buttons:
+brush
+eraser
+highlighter
+spray
+line drawer
+rect drawer
+ellipse drawer
+polygon drawer
+floodfiller
+
+import image from pc + resize
+export canvas
+undo
+redo
+clear screen
+
+
+brush setting:
+thickness
+transparency
+colour picker
+rect showing the colour u picked
+
+
+theme ideas
+
+
+
+
+music player
+
+
+changable background
+
+
+image stamping
+
+
+are u sure u want to close project without saving?
