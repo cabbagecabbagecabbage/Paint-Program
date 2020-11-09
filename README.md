@@ -1,11 +1,12 @@
 # Paint-Program
 A remake of MS Paint, with additional cool features (see below).
 
+<br>
 
 ## Downloading
 The easiest way to download is to click on the green "Code" button, and click download zip folder.
 
-
+<br>
 
 ## Usage
 To use the program, you need to satisfy the following requirements:
@@ -25,7 +26,7 @@ A restart may or may not be required after installing a new package
 
 After all the packages are installed, simply run main.py
 
-
+<br>
 
 ## List of individual features
 
@@ -58,7 +59,7 @@ After all the packages are installed, simply run main.py
     * the cursor is replaced with a crosshair when on the canvas for better visibility and accuracy when drawing
     * if you have not saved the canvas during the session yet, the program will ask you whether you would like to save the canvas before exiting. if so, it will automatically         commence the saving dialogue for you
 
-
+<br>
 
 ## Additional Notes
 
