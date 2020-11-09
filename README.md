@@ -28,7 +28,7 @@ After all the packages are installed, simply run main.py
 
 <br>
 
-## List of individual features
+## List of Individual Features
 
 * tool select highlight: a red border around the selected tool. also applies to music player buttons
 
