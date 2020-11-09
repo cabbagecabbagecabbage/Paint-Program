@@ -65,4 +65,4 @@ To use the program, simply click on main.py. Note that you must have Python 3 in
 
 * similarly, importing will lead you to the "images" directory first (this way you can find all the images previously searched), but you can import from anywhere on the pc
 
-* dont like the music? just replace the music in the static/music folder (not hardcoded), but remember to index from 0 -> n-1, where n is the amount of songs
+* dont like the music? just replace the music in the static/music folder (not hardcoded), but remember to index from 0 -> n-1, where n is the number of songs
