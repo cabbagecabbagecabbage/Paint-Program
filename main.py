@@ -394,6 +394,7 @@ def handleKeydown(evt):
         else:
             text += evt.unicode
     else:
+        #call different functions depending on key press
         if evt.key == K_u:
             handleUndo()
         elif evt.key == K_r:
@@ -499,10 +500,12 @@ def addstroke(mx,my,circlelist):
         xdiff = mx-px
         ydiff = my-py
         length = max(abs(xdiff),abs(ydiff))
-        if length>0: 
+        if length>0:
+            #calculate how long each interval should be
             xinterval = xdiff/length
             yinterval = ydiff/length
             for j in range(length):
+                #append circles at each interval
                 x,y = int(px+j*xinterval), int(py+j*yinterval)
                 circlelist.append((x,y))
         return circlelist
@@ -548,7 +551,7 @@ def drawSearched():
     screen.blit(searchicon, (200+searchbarx, searchbary))
 
     if text != '': #only render font if it exists
-        searchinput = font.render(text, True, c("black"))
+        searchinput = searchfont.render(text, True, c("black"))
         screen.blit(searchinput, (searchbarx+10,searchbarx+15))
 
     if modes[mode] == "searching":
@@ -593,7 +596,7 @@ def clearImageDownloads():
     except:pass
 
 def arrowchangedrawwidth(kp):
-    #changing drawwidth with arrow keys
+    #changing drawwidth with up/down arrow keys
     global drawwidth
     if kp[K_UP]:
         drawwidth = min(drawwidth+1,40) #no more than 40 pixels wide
@@ -655,18 +658,50 @@ def drawButtons():
             playprevborder = 0
         
 def drawBG():
+    #draw background
     screen.blit(woodbg,(0,0))
     screen.blit(bgdim1.surface,(searchbarx//2,25))
     screen.blit(bgdim2.surface,(350,25))
     screen.blit(bgdim3.surface,(475,500))
 
+def showinfo(mx,my):
+    #shows on the bottom right, info about the current tool, current colour, mouse position, and playing track
+
+    #shows position relative to canvas
+    left,top,width,height = canvas
+    mx = mx-left
+    my = my-top
+
+    #make sure coordinates are not negative
+    if mx < 0:
+        mx = 0
+    elif mx > left+width:
+        mx = left+width
+    
+    if my < 0:
+        my = 0
+    elif my > top+height:
+        my = top+height
+
+    text = f'Current tool: {modes[mode]}    Current colour: {(chosencolour[0],chosencolour[1],chosencolour[2])}    Mouse position: {mx}, {my}    Currently Playing: Track {cursong+1}'
+    text = infofont.render(text, True, c("white"))
+    screen.blit(text, (1175-text.get_size()[0],682))
+
+def blitcursor(mx,my):
+    #show a different cursor depending on position
+    if canvas.collidepoint(mx,my):
+        mouse.set_visible(0)
+        screen.blit(cursor,(mx-10//2,my-10//2))
+    else:
+        mouse.set_visible(1)
 
 def handleQuit():
+    #handle quit event
     if not saved: #if the user hasnt saved
-        ans = messagebox.askyesnocancel(title=None, message="Save the canvas?")
+        ans = messagebox.askyesnocancel(title=None, message="Save the canvas?") #ask the user if they want to save
         if ans == False:
             return False
-        if ans == True:
+        if ans == True: #if the answer is yes, commence saving process, then exit when done
             try:
                 fname=filedialog.asksaveasfilename(defaultextension=".png",initialdir="./saved images/")
                 image.save(screen.subsurface(canvas),fname)
@@ -704,7 +739,7 @@ def main():
             if evt.type == MOUSEMOTION: #only used for image movement
                 if imgmoving == 1:
                     imgrect.move_ip(evt.rel)
-            if evt.type == MUSICEND:
+            if evt.type == MUSICEND: #self defined event: when the music finishes
                 handleMusicNext()
         
         ########################### draw stuff ###########################
@@ -719,17 +754,26 @@ def main():
         #draw buttons
         drawButtons()
 
+        #draw title
         screen.blit(title,(483,520))
+
+        #show info
+        showinfo(mx,my)
+        
         #draw canvas
         screen.set_clip(Rect(canvas[0],canvas[1],canvas[2]+1,canvas[3]+1))
-
         screen.blit(screencap,(475,25))
         draw.rect(screen,c("black"),canvas,2)
 
+        #show action
         showaction(mb,mx,my)
 
+        #draw cursor
+        blitcursor(mx,my)
+
+
         ########################### adjust framerate, update ###########################
-        clock.tick(30) #control framerate
+        clock.tick(120) #control framerate
         display.flip()#update display
 
         screen.blit(screencap,(475,25)) #after showing action, erase what was shown in showaction() so that its temporary
@@ -753,6 +797,9 @@ bgdim3 = bg((700,175))
 #title
 title = transform.scale(image.load("static/title.png"),(450,130))
 
+#cursor
+cursor = image.load("static/crosshair.png")
+cursor = transform.scale(cursor,(10,10))
 
 #buttons
 buttons = [button(360,i*45+35,2*i+2) for i in range(8)]+[button(405,i*45+35,2*i+3) for i in range(8)]
@@ -848,7 +895,8 @@ searchbarx,searchbary = 50,50
 imgsearch = Rect(searchbarx, searchbary, 200, 50)
 searchbtn = Rect(200+searchbarx, searchbary, 50, 50)
 text = ''
-font = font.SysFont("Calibri", 24)
+searchfont = font.SysFont("Calibri", 24)
+infofont = font.SysFont("Calibri",12)
 stamping = 0
 stampimg = Surface((0,0))
 searchicon = transform.scale(image.load("static/buttons/searchicon.png"),(50,50))
