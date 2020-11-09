@@ -641,7 +641,7 @@ def showinfo(mx,my):
     elif my > top+height:
         my = top+height
 
-    text = f'Current tool: {modes[mode]}    Current colour: {(chosencolour[0],chosencolour[1],chosencolour[2])}    Mouse position: {mx}, {my}    Current Song: Track {cursong+1}'
+    text = f'Current tool: {modes[mode]}    Current colour: {(chosencolour[0],chosencolour[1],chosencolour[2])}    Mouse position: {mx}, {my}    Current Song: {musicnames[cursong]}'
     text = infofont.render(text, True, c("white"))
     screen.blit(text, (1175-text.get_size()[0],682))
 
@@ -798,6 +798,14 @@ musicmode = "inorder"
 musicmodes = ["inorder","loop","shuffle"]
 musicquant = len(listdir("static/music"))
 musicfnames = [f"static/music/{i}.mp3" for i in range(musicquant)]
+musicnames = ["Unnamed Track" for i in range(musicquant)]
+musicnames[0]="Illusion of Inflict"
+musicnames[1]="Croatian Rhapsody"
+musicnames[2]="Again"
+musicnames[3]="nc17"
+musicnames[4]="seele"
+musicnames[5]="Rainbow Main Theme"
+musicnames[6]="Guns and Roses"
 mixer.music.load(musicfnames[0])
 prevsong = 6
 cursong = 0
