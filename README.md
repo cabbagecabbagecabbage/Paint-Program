@@ -16,7 +16,7 @@ If you do not wish to download either package (or if you already have those 2 in
 
 
 # Usage
-To use the program, simply click on main.py. Note that you must have Python 3 installed already.
+To use the program, simply click on main.py after downloading. Note that you must have Python 3 installed already.
 
 
 # List of individual features
