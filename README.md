@@ -59,7 +59,7 @@ After all the packages are installed, simply run main.py
 
 * you cannot download images from the internet if you do not have internet :D however the rest of the program will still be usable
 
-* more than one keyword can be typed into the search bar. each time the search engine will scrape random images so that you dont get the same results every time. searching an empty string will load preloaded stamps
+* more than one keyword can be typed into the search bar. each time the search engine will scrape random images so that you dont get the same results every time. searching an empty string will load preloaded stamps. keyboard shortcuts will not be activated while you are typing in the search bar
 
 * you can scroll up or down to change the drawwidth, or the up and down arrows. for functionality, the width will be limited to between 1 to 40 pixels, and you cannot change drawing width during a stroke. this will end the stroke.
 
