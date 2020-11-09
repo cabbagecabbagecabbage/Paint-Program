@@ -44,6 +44,11 @@ To use the program, simply click on main.py after downloading. Note that you mus
     * left arrow/right arrow to change music playing mode (in order play through, loop, shuffle
     * page down/page up to toggle next track/previous track
 
+* additional features:
+    * preview box also shows drawing width
+    * info bar shows the name of the tool selected, (R,G,B) of colour chosen, mouse position on the canvas, and current song track
+    * the cursor is replaced with a crosshair when on the canvas for better visibility and accuracy when drawing
+    * if you have not saved the canvas during the session yet, the program will ask you whether you would like to save the canvas before exiting. if so, it will automatically         commence the saving dialogue for you
 
 ## Additional Notes
 
