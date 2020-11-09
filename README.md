@@ -1,4 +1,4 @@
-# Paint-Program
+# Paint Program
 A remake of MS Paint, with additional cool features (see below).
 
 <br>
