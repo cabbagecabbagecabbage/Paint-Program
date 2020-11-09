@@ -2,7 +2,7 @@
 A remake of MS Paint, with additional cool features (see below).
 
 ## Downloading
-The easiest way to download is to Click on the green "Code" button, and click download zip folder.
+The easiest way to download is to click on the green "Code" button, and click download zip folder.
 
 ## Usage
 To use the program, you need to satisfy the following requirements:
