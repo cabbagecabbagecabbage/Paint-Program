@@ -32,7 +32,7 @@ After all the packages are installed, simply run main.py
 
 * undo/redo
 
-* import image moving and resizing: after importing an image, click on the image, move the mouse and click again to where you want to move it. to resize, click on the small circle, move the mouse to reiszethen click again after finishing resize.
+* import image moving and resizing: after importing an image, click on the image, move the mouse and click again to where you want to move it. to resize, click on the small circle, move the mouse to reisze then click again after finishing resize.
 
 * image stamps searching: need a stamp for anything? just type in the search bar, search, and stamp it on. results randomized. to return to original stamps, press search without any inputting any keywords
     
