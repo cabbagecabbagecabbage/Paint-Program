@@ -4,6 +4,7 @@ A remake of MS Paint, with additional cool features (see below).
 # Downloading
 
 This repo includes pygame 2.0.0 because of certain functions behaving slightly differently if pygame 1.x.x is used
+
 user_agent (module used to download images) is also included
 
 If you do not wish to download either package (or if you already have those 2 installed), here are the files/folders you should download for the program to function:
