@@ -47,8 +47,6 @@ To use the program, simply click on main.py. Note that you must have Python 3 in
 
 # Additional Notes
 
-* theoretically all necessary packages/modules (pygame and user_agent) should already come with the program folder, provided that Python 3 is installed on the computer already
-
 * the theme of this paint project is...Wood!
 
 * you cannot download images from the internet if you do not have internet :D however the rest of the program will still be usable
