@@ -4,6 +4,7 @@ A remake of MS Paint, with additional cool features (see below).
 # Downloading
 
 This repo includes pygame 2.0.0 because of certain functions behaving slightly differently if pygame 1.x.x is used
+
 user_agent (module used to download images) is also included
 
 If you do not wish to download either package (or if you already have those 2 installed), here are the files/folders you should download for the program to function:
@@ -32,9 +33,7 @@ To use the program, simply click on main.py. Note that you must have Python 3 in
 
 * image stamps searching: need a stamp for anything? just type in the search bar, search, and stamp it on. results randomized. to return to original stamps, press search without any inputting any keywords
     
-* music player; featuring previous track, next track, pause/play, play through mode, loop play mode, and shuffle mode.
-    
-* dont like the music? just replace the music in the static/music folder (not hardcoded), but remember to index from 0 -> n-1, where n is the amount of songs
+* music player; featuring previous track, next track, pause/play, play through mode, loop play mode, and shuffle mode. 
     
 * convenient keyboard shortcuts:
     * "u" to undo
@@ -66,3 +65,4 @@ To use the program, simply click on main.py. Note that you must have Python 3 in
 
 * similarly, importing will lead you to the "images" directory first (this way you can find all the images previously searched), but you can import from anywhere on the pc
 
+* dont like the music? just replace the music in the static/music folder (not hardcoded), but remember to index from 0 -> n-1, where n is the amount of songs
