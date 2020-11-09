@@ -2,22 +2,25 @@
 A remake of MS Paint, with additional cool features (see below).
 
 ## Downloading
-
-This repo includes pygame 2.0.0 because of certain functions behaving slightly differently if pygame 1.x.x is used
-
-user_agent (module used to download images) is also included
-
-If you do not wish to download either package (or if you already have those 2 installed), here are the files/folders you should download for the program to function:
-
-* main.py
-* image_downloader_modified.py
-* static (folder)
-* saved images (folder)
-
+The easiest way to download is to Click on the green "Code" button, and click download zip folder.
 
 ## Usage
-To use the program, simply click on main.py after downloading. Note that you must have Python 3 installed already.
+To use the program, you need to satisfy the following:
+* Python 3
+* pygame (pygame 1 or 2 might cause the program to run differently)
+* user_agent
 
+Python 3 can be installed at https://www.python.org/downloads/
+
+if any of the modules/packages are missing, follow these steps:
+1. go to the Python Shell (idle)
+2. run "import sys"
+3. run "sys.path", copy one of the paths
+4. go to the command shell and type "pip install <package name> -t"<copied path>"
+    
+A restart may or may not be required after installing a new package
+
+After all the packages are installed, simply run main.py
 
 ## List of individual features
 
@@ -68,4 +71,4 @@ To use the program, simply click on main.py after downloading. Note that you mus
 
 * similarly, importing will lead you to the "images" directory first (this way you can find all the images previously searched), but you can import from anywhere on the pc
 
-* dont like the music? just replace the music in the static/music folder (not hardcoded), but remember to index from 0 -> n-1, where n is the number of songs
+* don't like the music? just replace the music in the static/music folder (not hardcoded), but remember to index from 0 -> n-1, where n is the number of songs
