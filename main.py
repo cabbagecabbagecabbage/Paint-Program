@@ -513,6 +513,7 @@ def addstroke(mx,my,circlelist):
         return [(mx,my)]
 
 def drawline(sx,sy,mx,my):
+    #draw circles to form a line from start to end
     clis = addstroke(mx,my,[(sx,sy)])
     for x,y in clis:
         draw.circle(screen, chosencolour, (x,y), drawwidth//2)
@@ -683,7 +684,7 @@ def showinfo(mx,my):
     elif my > top+height:
         my = top+height
 
-    text = f'Current tool: {modes[mode]}    Current colour: {(chosencolour[0],chosencolour[1],chosencolour[2])}    Mouse position: {mx}, {my}    Currently Playing: Track {cursong+1}'
+    text = f'Current tool: {modes[mode]}    Current colour: {(chosencolour[0],chosencolour[1],chosencolour[2])}    Mouse position: {mx}, {my}    Current Song: Track {cursong+1}'
     text = infofont.render(text, True, c("white"))
     screen.blit(text, (1175-text.get_size()[0],682))
 
