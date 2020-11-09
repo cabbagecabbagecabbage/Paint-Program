@@ -5,14 +5,14 @@ A remake of MS Paint, with additional cool features (see below).
 The easiest way to download is to Click on the green "Code" button, and click download zip folder.
 
 ## Usage
-To use the program, you need to satisfy the following:
+To use the program, you need to satisfy the following requirements:
 * Python 3
 * pygame (pygame 1 or 2 might cause the program to run differently)
 * user_agent
 
 Python 3 can be installed at https://www.python.org/downloads/
 
-if any of the modules/packages are missing, follow these steps:
+If any of the modules/packages are missing, follow these steps:
 1. go to the Python Shell (idle)
 2. run "import sys"
 3. run "sys.path", copy one of the paths
