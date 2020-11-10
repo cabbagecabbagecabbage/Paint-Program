@@ -11,7 +11,7 @@ The easiest way to download is to click on the green "Code" button, and click do
 ## Usage
 To use the program, you need to satisfy the following requirements:
 * Python 3
-* pygame (pygame 1 or 2 might cause the program to run differently)
+* pygame 2.0.0 or higher (pygame 1.x.x will cause the program to crash eventually)
 * user_agent
 
 Python 3 can be installed at https://www.python.org/downloads/
