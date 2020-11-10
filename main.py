@@ -121,7 +121,7 @@ def handleMousePress(evt):
                 importimg = Surface((0,0))
                 imgrect = Rect(0,0,0,0)
 
-            elif hypot(abs(evt.pos[0]-imgrect[0]-imgrect[2]), abs(evt.pos[1]-imgrect[1]-imgrect[3])) <=5:
+            elif hypot(abs(evt.pos[0]-imgrect[0]-imgrect[2]), abs(evt.pos[1]-imgrect[1]-imgrect[3])) <=5: #distance formula to check circle collision
                 imgresize = not imgresize
 
             elif imgrect.collidepoint(evt.pos):
