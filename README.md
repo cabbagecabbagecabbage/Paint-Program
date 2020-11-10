@@ -20,7 +20,7 @@ If any of the modules/packages are missing, follow these steps:
 1. go to the Python Shell (idle)
 2. run `import sys`
 3. run `sys.path`, copy one of the paths
-4. go to the command shell and type `pip install \<package name\> -t"\<copied path\>"`
+4. go to the command shell and type `pip install <package name> -t"<copied path>"`
     
 A restart may or may not be required after installing a new package
 
