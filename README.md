@@ -50,8 +50,10 @@ After all the packages are installed, simply run main.py
     * enter to search
     * tab to cycle through tools (dont worry, tools such as clear screen, import/export, undo/redo wont be executed automatically if u do this)
     * spacebar to play/pause music
-    * left arrow/right arrow to change music playing mode (in order play through, loop, shuffle
     * page down/page up to toggle next track/previous track
+    * left arrow/right arrow to change music playing mode (in order play through, loop, shuffle
+    * up/down arrow or scrollwheel to change drawing width
+    
 
 * additional features:
     * colour preview box also shows drawing width
