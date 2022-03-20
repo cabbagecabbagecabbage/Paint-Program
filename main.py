@@ -488,19 +488,19 @@ def randpoints(x,y):
     return pointslis
 
 from collections import deque #deques have efficient pop and append
-#using dfs is the most efficient compared to bfs or recursion dfs, because a queue stack is much smaller in memory than a recursion call or a bfs queue (our graph is very wide)
 def floodfill(sx,sy):
     #paintbucket fill using dfs
     global startcolour, chosencolour
     d = deque()
-    d.append((sx,sy))
+    d.appendleft((sx,sy))
+    screen.set_at((sx,sy),chosencolour)
     while d:
         x,y = d.pop()
-        screen.set_at((x,y),chosencolour) #set current pixel to chosencolour
-        for a,b in [(x-1,y),(x+1,y),(x,y-1),(x,y+1)]: #check in each direction
+        for a,b in ((x-1,y),(x+1,y),(x,y-1),(x,y+1)): #check in each direction
             if screen.get_at((a,b)) == startcolour: #if it is the same colour as we started
                 if 475<=a<1175 and 25<=b<475: #if it is within the canvas
                     d.append((a,b)) #add to deque
+                    screen.set_at((a,b),chosencolour)
         
 def drawSearched():
     #draw searched images
