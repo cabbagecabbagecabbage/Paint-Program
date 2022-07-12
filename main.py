@@ -798,14 +798,7 @@ musicmode = "inorder"
 musicmodes = ["inorder","loop","shuffle"]
 musicquant = len(listdir("static/music"))
 musicfnames = [f"static/music/{i}.mp3" for i in range(musicquant)]
-musicnames = ["Unnamed Track" for i in range(musicquant)]
-musicnames[0]="Illusion of Inflict"
-musicnames[1]="Croatian Rhapsody"
-musicnames[2]="Again"
-musicnames[3]="nc17"
-musicnames[4]="seele"
-musicnames[5]="Rainbow Main Theme"
-musicnames[6]="Guns and Roses"
+musicnames = ["Unnamed Track" for i in range(musicquant)] #Name your soundtracks here
 mixer.music.load(musicfnames[0])
 prevsong = 6
 cursong = 0
